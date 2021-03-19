@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guddu's | Bday | Timer</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <!-- <h1 class="m14">
+        <span class="letters letters-1">Let's</span>
+        <span class="letters letters-2">Celebrate</span>
+        <span class="letters letters-3">Your</span>
+        <span class="letters letters-4">Birthday</span>
+    </h1> -->
+        
+
+    <h1>Guddu's Birthday</h1>
+
+    <div class="countdown-container">
+        <div class="countdown-el days-container">
+            <p class="big-text" id="days"></p>
+            <span>days</span>
+        </div>
+        <div class="countdown-el hours-container">
+            <p class="big-text" id="hours"></p>
+            <span>hours</span>
+        </div>
+        <div class="countdown-el minutes-container">
+            <p class="big-text" id="minutes"></p>
+            <span>minutes</span>
+        </div>
+        <div class="countdown-el seconds-container">
+            <p class="big-text" id="seconds"></p>
+            <span>seconds</span>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+    <script>
+        var ml4 = {};
+        ml4.opacityIn = [0,1];
+        ml4.scaleIn = [0.2, 1];
+        ml4.scaleOut = 3;
+        ml4.durationIn = 800;
+        ml4.durationOut = 600;
+        ml4.delay = 500;
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml4 .letters-1',
+                opacity: ml4.opacityIn,
+                scale: ml4.scaleIn,
+                duration: ml4.durationIn
+            }).add({
+                targets: '.ml4 .letters-1',
+                opacity: 0,
+                scale: ml4.scaleOut,
+                duration: ml4.durationOut,
+                easing: "easeInExpo",
+                delay: ml4.delay
+            }).add({
+                targets: '.ml4 .letters-2',
+                opacity: ml4.opacityIn,
+                scale: ml4.scaleIn,
+                duration: ml4.durationIn
+            }).add({
+                targets: '.ml4 .letters-2',
+                opacity: 0,
+                scale: ml4.scaleOut,
+                duration: ml4.durationOut,
+                easing: "easeInExpo",
+                delay: ml4.delay
+            }).add({
+                targets: '.ml4 .letters-3',
+                opacity: ml4.opacityIn,
+                scale: ml4.scaleIn,
+                duration: ml4.durationIn
+            }).add({
+                targets: '.ml4 .letters-3',
+                opacity: 0,
+                scale: ml4.scaleOut,
+                duration: ml4.durationOut,
+                easing: "easeInExpo",
+                delay: ml4.delay
+            }).add({
+                targets: 'm14 .letters-4',
+                opacity: m14.opacityIn,
+                scale: m14.scaleIn,
+                duration: m14.durationIn
+            }).add({
+                targets: 'm14 .letters-4',
+                opacity: 0,
+                scale: m14.scaleOut,
+                duration: m14.durationOut,
+                easing: "easeInExpo",
+                delay: m14.delay
+            }).add({
+                targets: '.ml4',
+                opacity: 0,
+                duration: 500,
+                delay: 500
+            });
+    </script>
+</body>
+</html>
